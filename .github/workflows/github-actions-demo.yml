@@ -40,4 +40,4 @@ jobs:
       - name: test steps
         run: ls -la
       - name: Start sh ls script
-        run: sh ls_scipt.sh
+        run: sh file_new.sh
