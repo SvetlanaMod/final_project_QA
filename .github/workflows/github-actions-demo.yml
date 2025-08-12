@@ -30,3 +30,14 @@ jobs:
     steps:
       - name: Deploy to Production
         run: echo "Deploying to production environment..."
+    
+  sh-script-ls:
+    runs-on: ubuntu-latest
+    environment: production
+    needs: deploy-to-staging
+    steps:
+      - uses: actions/checkout@v4
+      - name: test steps
+        run: ls -la
+      - name: Start sh ls script
+        run: sh ls_scipt.sh
